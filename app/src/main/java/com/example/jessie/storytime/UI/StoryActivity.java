@@ -46,17 +46,15 @@ public class StoryActivity extends AppCompatActivity {
             name = "Friend";
         }
 
-        // Checking the intent
+        // Checking the intent - Testing
         Log.d(TAG, name);
-
         mStory = new Story();
-
         loadPage(0);
     }
 
+    // method for loading the right page of the story
     private void loadPage(int pageNumber) {
         final Page page = mStory.getPage(pageNumber);
-
         Drawable image = ContextCompat.getDrawable(this,page.getImageId());
         storyImageView.setImageDrawable(image);
 
@@ -77,13 +75,11 @@ public class StoryActivity extends AppCompatActivity {
             public void onClick(View v) {
                 loadPage(0);
             }
-        });
+        });  
     } else {
         loadButton(page);
     }
-
-    }
-
+}
     // Method to set the buttons up, make them functional, and hide them when needed
     private void loadButton(final Page page) {
         choice1Button.setVisibility(View.VISIBLE);
@@ -95,7 +91,6 @@ public class StoryActivity extends AppCompatActivity {
                 loadPage(nextPage);
             }
         });
-
         choice2Button.setVisibility(View.VISIBLE);
         choice2Button.setText(page.getChoice2().getTextId());
         choice2Button.setOnClickListener(new View.OnClickListener() {
@@ -106,5 +101,4 @@ public class StoryActivity extends AppCompatActivity {
             }
         });
     }
-
 }
