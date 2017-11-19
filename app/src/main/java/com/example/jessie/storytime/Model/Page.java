@@ -18,7 +18,6 @@ public class Page {
         this.imageId = imageId;
         this.textId = textId;
         this.isFinalPage = true;
-
     }
 
     // Custom constructor
@@ -27,10 +26,9 @@ public class Page {
         this.textId = textId;
         this.mChoice1 = mChoice1;
         this.mChoice2 = mChoice2;
-
     }
 
-    // getters and setters
+    // getters and setters for our variables
     public int getImageId() {
         return imageId;
     }
