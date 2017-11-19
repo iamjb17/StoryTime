@@ -11,7 +11,7 @@ public class Story {
     // Instance Variables. Array of page objects
     private Page[] mPages;
 
-    // Custom constructor
+    // Custom constructor for the Page objects
     public Story() {
         mPages = new Page[7];
         mPages[0] = new Page(R.drawable.page0,
@@ -44,7 +44,7 @@ public class Story {
         mPages[6] = new Page(R.drawable.page6, R.string.page6);
     }
 
-    // Getter method
+    // Getter method to get the right page
     public Page getPage(int pageNumber) {
         if (pageNumber >= mPages.length){
             pageNumber = 0;
