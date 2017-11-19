@@ -16,7 +16,7 @@ public class Choice {
         this.nextPage = nextPage;
     }
 
-    // Getters and setters
+    // Getters and setters for our variables
     public int getTextId() {
         return textId;
     }
